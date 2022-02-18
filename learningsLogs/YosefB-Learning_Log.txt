@@ -1,0 +1,8 @@
+DATE: 18th of February
+LOG: Decided upon the project. Initialised the project repository. Started 
+covering React Tutorial on Freecodecamp to grasp the basics of the framework. 
+Have researched the folder structure of projects done using MERN Stack and have 
+created initial folder structure for the project. In addition, have communicated 
+with the other project contirbutor in regards to the project to discuss the idea.
+It has been decided to reproduce an brief webapp flowchart to assist the production
+process. 
