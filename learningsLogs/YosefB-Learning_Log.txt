@@ -6,3 +6,12 @@ created initial folder structure for the project. In addition, have communicated
 with the other project contirbutor in regards to the project to discuss the idea.
 It has been decided to reproduce an brief webapp flowchart to assist the production
 process. 
+DATE: 22th of February
+LOG: After learning together how to build application flow-charts, me and another 
+project collaborator, we have designed a user experience flowchart using
+Lucidchart software. It also very clearly shows the client-side website structure
+which will prove to be useful later during the production process. 
+So far I am still covering Freecodecamp course and building beginner projects. 
+I have grasped a solid understanding of routing and redirects, which will 
+be very applicable when designing social media application, as exactly how
+flowchart shows, many redirects and routing will be necessary. 
