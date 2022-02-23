@@ -15,3 +15,5 @@ So far I am still covering Freecodecamp course and building beginner projects.
 I have grasped a solid understanding of routing and redirects, which will 
 be very applicable when designing social media application, as exactly how
 flowchart shows, many redirects and routing will be necessary. 
+DATE: 23rd of February
+LOG: Learned how to build designs with figma software. Built a design of profile page
