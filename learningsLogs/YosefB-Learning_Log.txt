@@ -17,3 +17,6 @@ be very applicable when designing social media application, as exactly how
 flowchart shows, many redirects and routing will be necessary. 
 DATE: 23rd of February
 LOG: Learned how to build designs with figma software. Built a design of profile page
+DATE: 4th of March
+LOG: Dived deeper into MongoDB and database schemas using mongoose. Continued to learn React. Built 2 sample projcts to 
+practice skills I have learned. Soon will start building profile page in our project.
