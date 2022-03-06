@@ -20,3 +20,6 @@ LOG: Learned how to build designs with figma software. Built a design of profile
 DATE: 4th of March
 LOG: Dived deeper into MongoDB and database schemas using mongoose. Continued to learn React. Built 2 sample projcts to 
 practice skills I have learned. Soon will start building profile page in our project.
+DATE: 6th of March
+LOG: Created a final practice project using react and pushed it to my github - https://github.com/russianambassador/restaurant_review_webapp
+Now I will start doing the main project as I think I have learned enough of basics and the rest I will learn on the go. 
