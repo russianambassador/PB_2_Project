@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { useRoutes } from 'react-router-dom';
 import MainLayout from './layouts/MainLayout/MainLayout';
 import AuthLayout from './layouts/AuthLayout/AuthLayout';
-import ProfileLayout from './layouts/ProfileLayout/ProfileLayout'
 import Login from './pages/LoginPage/Login';
 import Home from './pages/HomePage/Home';
 import Profile from './pages/profile/Profile';
@@ -25,13 +24,8 @@ const Router = () => {
                 { path:"/mygarden", element: <Home/>},
                 { path:"/campaigns", element: <Home/>},
                 { path:"/settings", element: <Home/>},
-                
-            ]
-        },
-        {
-            element: <ProfileLayout/>,
-            children: [
                 { path:"/profile", element: <Profile/>}
+                
             ]
         }
     ])

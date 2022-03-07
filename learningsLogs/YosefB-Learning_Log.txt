@@ -23,3 +23,8 @@ practice skills I have learned. Soon will start building profile page in our pro
 DATE: 6th of March
 LOG: Created a final practice project using react and pushed it to my github - https://github.com/russianambassador/restaurant_review_webapp
 Now I will start doing the main project as I think I have learned enough of basics and the rest I will learn on the go. 
+DATE: 7th of March
+LOG: Initialised server side. created package.json with required modules. Created initial routes/controllers, added dotenv and mongoose model for new users. created auth controller to add new users to cloud mongodb database. used bcrypt to has passwords for security. used helmet npm to protect http requests
+Added user update route. now user data updates with a put request. Dummy validation added to check if the user is the one logged in - needs editing. need to add additional validation routes when changing email/password. ollow/unfollow routes added. some validation added so user can't follow unfollow himself.Tried to make as robust as possible.
+DATE: 7th of March
+LOG: Removed follow/unfollow system. Added friends and friend requests system. Did some validation when sending requests to be friends so user can't send an invite again, or send an invite to a user he is not friends with. Added routes to block/unblock users. Edited user db schema to contain a list of blocked users. If user was blocked, you can't send him a friends request and neither he can send one to you. May be it is worth to add an ability to stay followed on a user even if you block him - to track his updates, but so he cant track yours.

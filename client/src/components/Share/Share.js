@@ -1,7 +1,12 @@
 import "./Share.scss"
+import { useState } from "react/cjs/react.production.min"
+import { useMediaQuery } from "../../functions/mediaQuery"
 import { PermMedia, Label, Room, EmojiEmotions } from "@mui/icons-material"
-
+import Multimedia from "../../design/icons/Share/Multimedia"
+import Location from "../../design/icons/Share/Location"
+import Tag from "../../design/icons/Share/Tag"
 const Share = () => {
+  
   return (
     <div className="ShareContainer">
         <div className="ShareWrapper">
@@ -13,15 +18,15 @@ const Share = () => {
             <div className="shareBottom">
                 <div className="shareOptions">
                     <div className="shareOption">
-                        <PermMedia htmlColor="tomato" className="shareIcon"/>
+                        <Multimedia  className="shareIcon"/>
                         {/* <span className="shareOptionText">Photo{'\u00A0'}or{'\u00A0'}Video</span> */}
                     </div>
                     <div className="shareOption">
-                        <Room htmlColor="green" className="shareIcon"/>
+                        <Location  className="shareIcon"/>
                         {/* <span className="shareOptionText">Location</span> */}
                     </div>
                     <div className="shareOption">
-                        <Label htmlColor="blue" className="shareIcon"/>
+                        <Tag  className="shareIcon"/>
                         {/* <span className="shareOptionText">Tag</span> */}
                     </div>
                     {/* <div className="shareOption">

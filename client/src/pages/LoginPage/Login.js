@@ -1,6 +1,6 @@
 
 import './Login.scss'
-
+import { useMediaQuery } from '../../functions/mediaQuery'
 
 const Login = () => {
   return (
@@ -29,13 +29,16 @@ const Login = () => {
                     </div>
                     <div className="AuthButtonContainer">
                       <button className="loginButton">Login</button>
-                      <button className="registerButton">Join Now</button>
+                      <button className="registerButton">Join{'\u00A0'}Now</button>
                     </div>
               </div>
          </div>
+         {useMediaQuery('(min-width: 460px)')?
          <div className="loginRight">
          <img className='logo' src="/assets/logo.png" alt="" />
          </div>
+         :
+         null}       
       </div>
     </div>
   )

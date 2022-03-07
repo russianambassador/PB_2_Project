@@ -3,7 +3,7 @@ import "./LeftBar.scss"
 import "./LeftBar.css"
 import { NavLink } from "react-router-dom";
 import PersonCircle from "../../design/icons/LeftbarIcons/PersonCircle"
-import Friends from "../../design/icons/LeftbarIcons/Friends"
+import Home from "../../design/icons/TopbarIcons/Home"
 import Leaf from "../../design/icons/LeftbarIcons/Leaf"
 import Award from "../../design/icons/LeftbarIcons/Award"
 import Settings from "../../design/icons/LeftbarIcons/Settings"
@@ -25,7 +25,7 @@ const LeftBar = () => {
                     <span className="listItemText">
                         Friends
                     </span>
-                    <Friends className="icon"/>                  
+                    <Home className="icon"/>                  
                 </NavLink>
                 <NavLink to="mygarden"className="listItem">         
                     <span className="listItemText">

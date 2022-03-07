@@ -7,7 +7,6 @@ import Rightsidebar from "../GeneralComponents/Navigation/RightSidebar/Rightside
 const Home = () => {
   return (
     <>
-    
       <TopNavbar/>
       <div className="homeContainer">
         <LeftSidebar/>
