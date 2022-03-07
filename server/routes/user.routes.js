@@ -13,8 +13,15 @@ router.delete("/:id", UserCtrl.deleteUser);
 router.get("/:id", UserCtrl.getUser);
 //friend a user
 router.put("/:id/add-friend", UserCtrl.addFriend);
-//unfollow a user
+//unfriend a user
 router.put("/:id/remove-friend", UserCtrl.removeFriend);
-
+//decline friend invitation
+router.put("/:id/decline-invitation", UserCtrl.declineInvitation);
+//remove friend request
+router.put("/:id/remove-request", UserCtrl.removeRequest);
+//block user
+router.put("/:id/block", UserCtrl.blockUser);
+//unblock user
+router.put("/:id/unblock", UserCtrl.unblockUser);
 
 export default router;
