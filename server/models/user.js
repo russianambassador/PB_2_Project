@@ -26,14 +26,19 @@ const UserSchema = new mongoose.Schema({
         type:String,
         default:""
     }, 
-    followers: {
+    friends: {
         type:Array, 
         default:[]
     },
-    following: {
-        type:Array, 
+    pendingInvites:{
+        type:Array,
         default:[]
     },
+    pendingRequests:{
+        type:Array,
+        default:[]
+    },
+
     isAdmin: {
         type:Boolean,
         default: false

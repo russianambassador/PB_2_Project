@@ -11,9 +11,10 @@ router.put("/:id", UserCtrl.updateUser)
 router.delete("/:id", UserCtrl.deleteUser);
 //get a user
 router.get("/:id", UserCtrl.getUser);
-//follow a user
-router.put("/:id/follow", UserCtrl.followUser);
+//friend a user
+router.put("/:id/add-friend", UserCtrl.addFriend);
 //unfollow a user
-router.put("/:id/unfollow", UserCtrl.unfollowUser);
+router.put("/:id/remove-friend", UserCtrl.removeFriend);
+
 
 export default router;

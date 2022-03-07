@@ -52,18 +52,61 @@ export default class UserController {
             res.status(500).json(e);
         }
     }
-    static async followUser(req, res, next) {
+    static async addFriend(req, res, next) {
         if(req.body.userId !== req.params.id){
             try{
-                const usertoFollow = await User.findById(req.params.id);
-                if(usertoFollow){
+                const usertoAdd = await User.findById(req.params.id);
+                if(usertoAdd){
                     const currentUser = await User.findById(req.body.userId);
-                    if(!usertoFollow.followers.includes(req.body.userId)){
-                    await usertoFollow.updateOne({$push:{followers:req.body.userId}});
-                    await currentUser.updateOne({$push:{following:req.params.id}});
-                    res.status(200).json("User has been successfully followed")
+                    if(currentUser.pendingInvites.includes(req.params.id) && usertoAdd.pendingRequests.includes(req.body.userId)) {
+                        await usertoAdd.updateOne({$push:{friends:req.body.userId}});
+                        await currentUser.updateOne({$push:{friends:req.params.id}});
+                        await currentUser.updateOne({$pull:{pendingInvites:req.params.id}});
+                        await usertoAdd.updateOne({$pull:{pendingRequests:req.body.userId}});
+                        res.status(200).json("You have successfully accepted invitation to become friends")
+                    } else{
+                        if(!usertoAdd.friends.includes(req.body.userId)){
+                            if(!usertoAdd.pendingInvites.includes(req.body.userId)){
+                                await usertoAdd.updateOne({$push:{pendingInvites:req.body.userId}});
+                                await currentUser.updateOne({$push:{pendingRequests:req.params.id}});
+                                res.status(200).json("User has been successfully invited to be your friend")
+                            } else {
+                                res.status(403).json("You have already sent an invite")
+                            }
+                        
+                        } else {
+                            res.status(403).json("You are already friends with this user")
+                        }
+                    }
+                } else{
+                    res.status(404).json("User was not found");
+                    return 
+                }
+
+            } catch(e) {
+                if(e.name === "CastError"){
+                    res.status(500).json("Invalid UserId was inputted. Please try to reload the page and try again")
+                    console.log(e)    
+                } else {res.status(500).json({"error":e})  
+                console.log(e)  }
+                
+                }
+        } else{
+            res.status(403).json("You can't be friends with yourself")
+        }
+    }
+    static async removeFriend(req, res, next) {
+        if(req.body.userId !== req.params.id){
+            try{
+                const usertoRemove = await User.findById(req.params.id);
+                if(usertoRemove){
+                    const currentUser = await User.findById(req.body.userId);
+                    if(usertoRemove.friends.includes(req.body.userId)){
+                    await usertoRemove.updateOne({$pull:{friends:req.body.userId}});
+                    await currentUser.updateOne({$pull:{friends:req.params.id}});
+                    res.status(200).json("User has been successfully from your friends list")
                     } else {
-                        res.status(403).json("You already follow this user")
+                        res.status(403).json("You are not friends with this user")
                     }
                 } else{
                     res.status(404).json("User was not found");
@@ -73,33 +116,11 @@ export default class UserController {
             } catch(e) {
                 res.status(500).json(e)            }
         } else{
-            res.status(403).json("You can't follow yourself")
+            res.status(403).json("You can't stop being friends with yourself")
         }
     }
-    static async unfollowUser(req, res, next) {
-        if(req.body.userId !== req.params.id){
-            try{
-                const usertoFollow = await User.findById(req.params.id);
-                if(usertoFollow){
-                    const currentUser = await User.findById(req.body.userId);
-                    if(usertoFollow.followers.includes(req.body.userId)){
-                    await usertoFollow.updateOne({$pull:{followers:req.body.userId}});
-                    await currentUser.updateOne({$pull:{following:req.params.id}});
-                    res.status(200).json("User has been successfully unfollowed")
-                    } else {
-                        res.status(403).json("You don't follow this user")
-                    }
-                } else{
-                    res.status(404).json("User was not found");
-                    return 
-                }
+   
 
-            } catch(e) {
-                res.status(500).json(e)            }
-        } else{
-            res.status(403).json("You can't unfollow yourself")
-        }
-    }
 
 
     
