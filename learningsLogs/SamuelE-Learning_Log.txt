@@ -1,1 +1,6 @@
+07/03/2022
+I have been learning by watching videos and by exercise.
+I have watched the first few hours of the freecodeacademy's video on react, but decided to move to w3school.
+I covered preety much all the basic, such as the usefullness of render, the use of conditionals, components, class, event and etc.
+Two more days and I feel like I will be ready to work on the project, and things I will need to know that I yet not know I will learn it as I build the project with my companion.
 
