@@ -1,22 +1,26 @@
 import mongoose from "mongoose";
+import bcrypt from "bcrypt";
+import config from "../config/config.js"
+
+
 
 const UserSchema = new mongoose.Schema({
     username:{
         type:String,
-        require:true,
+        require:"Name is required",
         min:3,
-        unique:true
+        unique:"Username already exists"
     },
     email: {
         type:String, 
-        require:true, 
-        max:50, 
-        unique:true
+        unique: 'Email already exists',
+        match: [/.+\@.+\..+/, 'Please fill a valid email address'],
+        required: 'Email is required'
     },
     password: {
         type: String,
-        required:true,
-        min:8
+        required: "Password is required",
+        minlength:8
     }, 
     profilePicture: {
         type:String,
@@ -65,10 +69,26 @@ const UserSchema = new mongoose.Schema({
         type:Number,
         enum: [1,2,3]
         
-    },
+    }
+    
 
 },
 {timestamps:true}, {collection:"users"}
 );
+UserSchema
+  .pre("save", function() {                             //this woudl automatically encrypt password when it is put in by user
+    this.password = this.securePassword(this.password)
+  })
+
+UserSchema.methods = {
+    authenticateUser: async function(passwordInput){    //basic jw authentication
+        return await bcrypt.compare(passwordInput, this.password);
+    },
+    securePassword: function (passwordInput){
+        return bcrypt.hashSync(passwordInput, config.salts)
+    }
+}
+
+
 
 export default mongoose.model("User", UserSchema);

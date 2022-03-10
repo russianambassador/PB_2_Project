@@ -1,27 +1,28 @@
 import express from "express";
-import UserCtrl from "../controllers/user.controller.js"
-
+import UserCtrl from "../controllers/user.controller.js";
+import loginRequired from "../middleware/authJwt.js";
+//import verifyToken from "../middleware/authJwt.js";
 
 const router = express.Router();
-
-router.get("/checkUser", UserCtrl.GetUserCheck);
+//check router and controller work
+router.get("/checkUser",loginRequired, UserCtrl.GetUserCheck);
 //update
-router.put("/:id", UserCtrl.updateUser)
+router.put("/:id", loginRequired, UserCtrl.updateUser)
 //delete
-router.delete("/:id", UserCtrl.deleteUser);
+router.delete("/:id", loginRequired,UserCtrl.deleteUser);
 //get a user
-router.get("/:id", UserCtrl.getUser);
+router.get("/:id", loginRequired,UserCtrl.getUser);
 //friend a user
-router.put("/:id/add-friend", UserCtrl.addFriend);
+router.put("/:id/add-friend", loginRequired,UserCtrl.addFriend);
 //unfriend a user
-router.put("/:id/remove-friend", UserCtrl.removeFriend);
+router.put("/:id/remove-friend",loginRequired, UserCtrl.removeFriend);
 //decline friend invitation
-router.put("/:id/decline-invitation", UserCtrl.declineInvitation);
+router.put("/:id/decline-invitation", loginRequired,UserCtrl.declineInvitation);
 //remove friend request
-router.put("/:id/remove-request", UserCtrl.removeRequest);
+router.put("/:id/remove-request",loginRequired, UserCtrl.removeRequest);
 //block user
-router.put("/:id/block", UserCtrl.blockUser);
+router.put("/:id/block", loginRequired,UserCtrl.blockUser);
 //unblock user
-router.put("/:id/unblock", UserCtrl.unblockUser);
+router.put("/:id/unblock",loginRequired, UserCtrl.unblockUser);
 
 export default router;

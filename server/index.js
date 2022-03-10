@@ -1,14 +1,14 @@
 import express from "express";
 import mongoose from "mongoose";
-import dotenv from "dotenv";
-import app from "./server.js"
 
+import app from "./server.js"
+import config from "./config/config.js"
 
 //configuring hidden enviroment variables
-dotenv.config()
+
 //database connection setup
-const port = process.env.PORT || 6000;
-mongoose.connect(process.env.MONGO_URL, {useNewUrlParser: true})
+const port = config.PORT || 6000;
+mongoose.connect(config.MONGO_URL, {useNewUrlParser: true, useUnifiedTopology: true})
 .then(data => {
     app.listen(port, ()=> {
         console.log("Server is running at port " + port)
