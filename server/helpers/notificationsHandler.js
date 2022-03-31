@@ -1,3 +1,3 @@
-const async addNotification =(notification, user) =>{
-    //
+const  addNotification = async(notification, user) =>{
+    
 }
