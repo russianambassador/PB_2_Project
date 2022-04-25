@@ -19,5 +19,5 @@ LOG: During this timeframe I have been watching other people building their apps
 DATE: 30th of March
 LOG: I have learned new things and I have finished designing the login and register page after so many attempts in doing it. I used bootstrap to make my life easier when coding the login and register page but it turned out that I needed more practice with css styling, as I was struggling with containers and positions. After failed attempts with mainly guessing the positions and container adjustment I decided to actually go into w3school to learn, which did not help me as I already knew the definition of most of these css property. Because of this I went more into practical and encountered a video on youtube which built a page with the same concept. I now have to somehow connect database to these pages.
 
-DATE: 14th OF April
-LOG:Delayed, wrong work, wasted time
+DATE: 10th of April
+LOG: I delayed the submission of my work because I assumed that I was also going to add code related to database. During this timeframe I have been watching a youtube video on how to add mongoose database which took me time as I did not know how to implement it to my project. After many trial and error I received news that I shouldn't be working on the database so I stopped what I was doing and pushed the code to the git repository. This has caused me to waste a lot of time but I learned about adding database to your code in react.
