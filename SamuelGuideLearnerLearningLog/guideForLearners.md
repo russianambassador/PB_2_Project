@@ -1,4 +1,4 @@
-![](https://webassets.mongodb.com/_com_assets/cms/MERN_Stack-g2t2atpx2n.png)
+![s](https://webassets.mongodb.com/_com_assets/cms/MERN_Stack-g2t2atpx2n.png)
 ## Motivation
 React is a JavaScript framework and amongst the easiest one to learn, which makes it advantageous on the aspect of deployment time. Hence, if you are in need to build a mobile app in a short timeframe then React might be the best choice for you. Another aspect that makes React stand out even more is the ability to reuse components. A component is any piece of UI used in application, and these can be navigation bars or input bars. This aspect greatly contributes to the reduction of deployment time, as it removes the need to recode the same UI multiple time.
 
