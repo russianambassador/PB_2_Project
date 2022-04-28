@@ -1,4 +1,5 @@
-![s](https://webassets.mongodb.com/_com_assets/cms/MERN_Stack-g2t2atpx2n.png)
+1. 
+![](https://webassets.mongodb.com/_com_assets/cms/MERN_Stack-g2t2atpx2n.png) 
 ## Motivation
 React is a JavaScript framework and amongst the easiest one to learn, which makes it advantageous on the aspect of deployment time. Hence, if you are in need to build a mobile app in a short timeframe then React might be the best choice for you. Another aspect that makes React stand out even more is the ability to reuse components. A component is any piece of UI used in application, and these can be navigation bars or input bars. This aspect greatly contributes to the reduction of deployment time, as it removes the need to recode the same UI multiple time.
 
@@ -27,4 +28,5 @@ MongoDB is a database program used by many and is classified as a NoSQL database
 
 With the skills learnt from this guide you will be able to build an astonishing application, websites and platforms. The ability to use database alongside React has given you the ability to do so much more with the project you will build. Although the process to master everything mentioned in the previous sections is long and require a lot of practice, it is very worth it. It makes you, the developer, to gain more coding experience, it helps you save time in the long-run, and it gives you a good starting point when doing mobile development. In my opinion, React has been worth my time and I am excited to learn more of it in the future. However, because I am not too much of a JavaScript expert, I feel like I should have learnt Vue instead of React as it is a better choice for newer developer and also has a better performance.
 
-
+## Reference
+1. Andrew Morgan (2017) The Modern Application Stack - Part 5: Using ReactJS, ES6 & JSX to Build a UI (the rise of MERN) [Online image] Available from: https://www.mongodb.com/blog/post/the-modern-application-stack-part-5-using-reactjs-es6-and-jsx-to-build-a-ui-the-rise-of-mern [Accessed 28/04/2022].
