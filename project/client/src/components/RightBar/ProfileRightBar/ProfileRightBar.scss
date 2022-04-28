@@ -1,0 +1,31 @@
+.pointsContainer{
+    height: 200px;
+    width: 100%;
+    background-color: #649B4D;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    align-items: center;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    .iconContainer{
+        margin-top: 30px;
+    }
+    .pointsCounterContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color:#ffffff;
+        .counter{
+            font-size: 36px;
+            line-height: 36px;
+            font-weight: 600;
+            margin: 0;
+        }
+    }
+}
+@media only screen and (min-width: 1320px){
+    .pointsContainer{
+        width: 80%;
+    }
+    
+}

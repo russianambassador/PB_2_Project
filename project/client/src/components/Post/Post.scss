@@ -1,0 +1,110 @@
+.PostContainer{
+
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 7px 3px 15px rgba(0, 0, 0, 0.25);
+    margin: 30px 0px 30px 0px;
+    .PostWrapper{
+        padding: 0px;
+        position: relative;
+        .PostTopLeft{
+            top: -25px;
+            background-color: white;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+            padding: 3px;
+            border-radius: 10px;
+            position:absolute;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            display: flex;
+            cursor: pointer;
+                align-items: center;
+                .postProfileImg{
+                    width: 32px;
+                    height: 32px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                    margin-right: 15px;
+                    
+                }
+                .postUsername{
+                    font-size: 15px;
+                    font-weight: 500;
+                    margin-right: 10px;
+                    
+                }
+            
+        }
+        .PostTopRight{
+            position: absolute;
+            top: -25px;
+            right: -10px;
+            cursor: pointer;
+        }
+        .PostCenter{
+            border-radius: 10px 10px 0px 0px;
+            margin: 0px 0px;
+            margin-top: 0px;
+            width: 100%;
+            object-fit: contain;
+            
+        }
+        .PostBottom{
+            font-size: 13px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            .likeCounter{
+                position:absolute;
+                top: -21px;
+                background-color: white;
+                padding: 2px 5px 0px 5px;
+                border-radius: 5px;
+                color: #99BE8A;
+            }
+            .postButtonGroup{
+                margin-top: 5px;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                .iconButton{
+                    cursor: pointer;
+                }
+            }
+            .postTime{
+                font-size: 12px;
+                font-weight: 300;
+            }
+            .postText{
+                margin:3px 10px 10px 10px ;
+                font-size: 13px;
+                .name{
+                    font-weight: 700;
+                    margin-right:10px;
+                }
+                .text{
+                    font-weight: 500;
+                }
+
+            }
+            .postBottomLeft{
+                margin-left: 10px;
+                .postCommentText{
+                    cursor: pointer;
+                    font-weight: 300;
+                    color: #99BE8A;
+                    font-size: 13px;
+                }
+            }
+            .postBottomRight{
+                margin: 3px 10px;
+                .postTime{
+                    color:#C4C4C4;
+                    float: left;
+                }
+            }
+        }
+    }
+}

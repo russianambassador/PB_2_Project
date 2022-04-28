@@ -1,2 +1,3 @@
 # PB_2_Project
-This is a repository for my Programming coursework collaborative project. Here, I will work on a Social Media web-application using MERN Stack while collaborating with my university mates. I am going to try to learn React on the go. 
+Programming Black coursework Assignment 2 by Yosef Berezovskiy
+[LINK TO THIS REPOSITORY](https://github.com/russianambassador/programmingBlack.git)(as required)

@@ -1,0 +1,312 @@
+
+    .birthdayContainer{
+        display: flex;
+        align-items: center;
+        .birthdayImg{
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        .birthdayText{
+            font-weight: 300;
+            font-size: 15px;
+        }
+    }
+    .adContainer{
+        width: 100%;
+        border-radius: 10px;
+        margin: 20px 0px;
+    }
+    
+    .friendsList{
+        padding: 0;
+        margin: 0px 10px;
+        list-style: none;
+        height: 500px;
+        overflow-y: scroll;
+        .friend{
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            position: relative;
+            .imgContainer{
+                width: 32px;
+                height: 32px;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+            .username{
+                margin-left: 5px;
+                font-weight: 500;
+            }
+            .onlineStatus{
+                margin-left: 10px;
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                background-color: rgb(0, 131, 0);
+                position: absolute;
+                top: 0px;
+                left: 13px;
+                border: 2px solid white;
+            }
+        }
+    }
+   
+    .messagesContainer{
+        margin-top: 20px;
+        height: 260px;
+        background-color: white;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        .searchbar{
+            width: 95%;
+            margin: 7px 0px 7px 0px;
+            height: 35px;
+            background-color: #E9E9E9;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            .searchIcon{
+                font-size: 20px !important;
+                margin-left: 10px;
+            }
+            .searchInput{
+                border: none;
+                width: 80%;
+                background-color:#E9E9E9 ;
+                &:focus{
+                    outline: none;
+                }
+            }
+        }
+        .messageList{
+            height: 100%;
+            width: 100%;
+            overflow-y: scroll;
+            .messageBox{
+                overflow: hidden;
+                display: flex;
+                width: 100%;
+                height: 60px;
+                box-sizing: border-box;
+                border: 3px solid rgba(0, 0, 255, 0);
+                box-shadow: 0px 0.3px 0px rgba(0, 0, 0, 0.1);
+    
+                .mbLeft{
+                    width: 30px;
+                    height: 100%;
+    
+                    .userImg{
+                        width: 26px;
+                        height: 26px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                        margin: 2px;
+                        
+                    }
+                }
+                .mbCenter{
+                    flex-grow: 100;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    .name{
+                        font-size: 12px;
+                        font-weight: 700;
+                        line-height: 16px;
+                    }
+                    .messageText{
+                        p{
+                            margin: 0;
+                            line-height: 9px;
+                        }
+                        .sender{
+                            font-size: 9px;
+                            font-weight: 700;
+                            line-height: 9px;
+                            margin: 0;
+                        }
+                        .text{
+                            margin: 0;
+                            font-size: 9px;
+                            font-weight: 700;
+                            line-height: 9px;
+                        }
+                    }
+                }
+                .mbRight{
+                    width: 30px;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    .date{
+                        margin-right: 2px;
+                        font-size: 10px;
+                        font-weight: 700;
+                    }
+                    .unreadCounter{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 10px;
+                        color: white;
+                        width:15px;
+                        height: 15px;
+                        border-radius: 50%;
+                        background-color: #649B4D;
+                    }
+                }
+            }
+    
+        }
+    }
+    .rankingsContainer{
+        margin-top: 20px;
+        height: 355px;
+        background-color: white;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        .filterGroup{
+            display: flex;
+            width: 100%;
+            .filterButton{
+                padding: 5px;
+                flex-grow: 50;
+                background-color: #649B4D;
+                border: none;
+                outline: none;
+                &.Left{
+                    border-right: 0.5px solid #00524374;
+                    border-radius: 5px 0px 0px 0px;
+                }
+                &.Right{
+                    border-radius: 0px 5px 0px 0px;
+                    border-left: 0.5px solid  #00524374;;
+                }
+            }
+            .filterButtonLeftActive{
+                padding: 5px;
+                flex-grow: 50;
+                background-color: #328121;
+                border: none;
+                outline: none;
+                border-right: 0.5px solid #00524374;
+                border-radius: 5px 0px 0px 0px;
+            }
+            .filterButtonRightActive{
+                padding: 5px;
+                flex-grow: 50;
+                background-color: #328121;
+                border: none;
+                outline: none;
+                border-radius: 0px 5px 0px 0px;
+                border-left: 0.5px solid  #00524374;;
+            }
+        }
+        .title{
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: 700;
+            text-align: center;
+            color: #649B4D;
+        }
+        .rankingList{
+            overflow-y: scroll;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .rankingItem{
+                
+                display: flex;
+                height: 45px;
+                min-width: 95%;
+                background-color: #e8e8e8;
+                border-radius: 15px;
+                margin-bottom: 5px;
+               
+                .itemLeft{
+                    display: flex;
+                    align-items: center;
+                    width: 40px;
+                    height: 100%;
+                    
+                    .userImg{
+                        margin: auto;
+                        width: 35px;
+                        height: 35px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+                }
+                .itemCenter{
+                    display: flex;
+                    align-items: center;
+                    flex-grow: 60;
+                    height: 100%;
+                    
+                    .userName{
+                     font-weight: 600;
+                     font-size: 12px;
+                     line-height: 10px;
+                    }
+                }
+                .itemRight{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 40%;
+                    height: 100%;
+                    .counterContainer{
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        .pointsCounter{
+                            font-weight: 700;
+                            color: #40722a;
+                        }
+                    }
+                    .ranking{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-self:start;
+                        width: 45px;
+                        color: #40722a;
+                        position: relative;
+                        text-align: center;
+                        font-size: 13px;
+                        font-weight: 700;
+                        .RankingPlaceBadge{
+                            // margin;
+                            position: absolute;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+@media only screen and (min-width: 1320px){
+    .rankingsContainer{
+        width: 80%;
+    }
+    .messagesContainer{
+        width: 80%;
+    }
+}

@@ -1,0 +1,110 @@
+.topbarContainer{
+    height: 80px;
+    width:100%;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top:0;
+    background-color: white;
+    touch-action: none;
+
+}
+.topbarLeft{
+    flex:1;
+    position: relative;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    .logo{
+        width: 65px;
+        height: 65px;
+        cursor: pointer;
+    }
+    .logoButton{
+        border: none;
+        background-color: transparent;
+        &:focus{
+            outline: none;
+        }
+        .logo{
+            width: 65px;
+            height: 65px;
+            cursor: pointer;
+        }
+    }
+    
+    
+}
+.topbarCenter{
+    flex:3.5;
+   
+    .searchbar{
+        width: 100%;
+        height: 50px;
+        background-color: #E9E9E9;
+        border-radius: 2px;
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+        .searchIcon{
+            font-size: 20px !important;
+            margin-left: 10px;
+        }
+        .searchInput{
+            border: none;
+            width: 90%;
+            background-color:#E9E9E9 ;
+            &:focus{
+                outline: none;
+            }
+        }
+    }
+}
+.topbarRight {
+    flex:1.3;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color:#649b4d;
+    .topbarLink{
+        margin-right: 10px;
+        font-size: 14px;
+        cursor: pointer;
+    }
+    .topbarIconItem{
+        margin-right: 15px;
+        cursor: pointer;
+        position: relative;
+        .topbarIconBadge{
+            width:15px;
+            height: 15px;
+            background-color: red;
+            border-radius: 50%;
+            color: white;
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+        }
+    }
+    .logo{
+        width: 65px;
+        height: 65px;
+        cursor: pointer;
+    }
+    .topbarImg{
+        width:32px;
+        height:32px;
+        border-radius: 30%;
+        object-fit: cover;
+        cursor: pointer;
+
+    }
+}
+
+
