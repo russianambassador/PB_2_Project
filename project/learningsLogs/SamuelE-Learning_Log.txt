@@ -22,5 +22,11 @@ LOG: I have learned new things and I have finished designing the login page afte
 DATE: 31st of March
 LOG: I designed the register page which was fast to do as it used the same template as the login page, and only had to add a few stuff
 
+DATE: 1st of April
+LOG: I was able to make the register and login page look the way I wanted it to. I also added a functionality to my my page template using eventListeners, which makes the left border of the box go green when the mouse goes on top and go back to normal when the mouse is removed from there.
+
+DATE: 5th of April
+LOG: I applied node.js and express.js to my login and register by watching a tutorial on youtube. The tutorial from Dev and Design was extremelly helpfull. I also learnt how to use http and axios, which I had to give a further look as I kept on struggling to get it to work on my project.
+
 DATE: 10th of April
 LOG: I delayed the submission of my work because I assumed that I was also going to add code related to database. During this timeframe I have been watching a youtube video on how to add mongoose database which took me time as I did not know how to implement it to my project. After many trial and error I received news that I shouldn't be working on the database so I stopped what I was doing and pushed the code to the git repository. This has caused me to waste a lot of time but I learned about adding database to your code in react.
